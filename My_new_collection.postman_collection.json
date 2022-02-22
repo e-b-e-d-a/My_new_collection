@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "324d88b3-b514-41c8-9e06-bbac00c22b28",
+		"name": "My_new_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "www.moakt.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"98\", \"Google Chrome\";v=\"98\""
+					},
+					{
+						"key": "dnt",
+						"value": "1"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "origin",
+						"value": "https://www.moakt.com"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.moakt.com/ru/mail"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en;q=0.9,ru-RU;q=0.8,ru;q=0.7,en-US;q=0.6"
+					},
+					{
+						"key": "cookie",
+						"value": "MKT_LANG=ru; PHPSESSID=27805f9ccec40bf6839e7cdd9e36a190; __utma=213295240.1580734186.1645511223.1645511223.1645511223.1; __utmc=213295240; __utmz=213295240.1645511223.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmt=1; _ga=GA1.2.1580734186.1645511223; __cf_bm=qN98uOlLQYGqrsH56qV79uRczys5KCPOC5b7XLEj6Xc-1645511225-0-ARwtpFQIayt35i2C0ypV0N7A6unbPtieM9hNguGC2f5vWXN7dZOOnYRR6i/mLIXj/5+HUOAfaO9B8EnJOg6ymePQ91ijPxbGIpDETdrYBI0SoftYf31qwZu8rN5oBMrR+A==; __utmb=213295240.5.10.1645511223"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oh",
+							"value": "nXzXivl0t7",
+							"type": "text"
+						},
+						{
+							"key": "n",
+							"value": "L6nY3yg_Dtw",
+							"type": "text"
+						},
+						{
+							"key": "ci",
+							"value": "4147537915",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_URL}}/mod_pagespeed_beacon?url=https://www.moakt.com.ru/mail",
+					"host": [
+						"{{base_URL}}"
+					],
+					"path": [
+						"mod_pagespeed_beacon"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://www.moakt.com.ru/mail"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change email",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var newMail = pm.variables.set(\"newMail\",\"new_box\" + Math.round(Math.random() * (999-1)) + \"@tmpbox.net\");",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "www.moakt.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"98\", \"Google Chrome\";v=\"98\""
+					},
+					{
+						"key": "dnt",
+						"value": "1"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded; charset=UTF-8"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/javascript, */*; q=0.01"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"macOS\""
+					},
+					{
+						"key": "origin",
+						"value": "https://www.moakt.com"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://www.moakt.com/ru/mail"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-GB,en;q=0.9,ru-RU;q=0.8,ru;q=0.7,en-US;q=0.6"
+					},
+					{
+						"key": "cookie",
+						"value": "MKT_LANG=ru; PHPSESSID=27805f9ccec40bf6839e7cdd9e36a190; __utma=213295240.1580734186.1645511223.1645511223.1645511223.1; __utmc=213295240; __utmz=213295240.1645511223.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmt=1; _ga=GA1.2.1580734186.1645511223; __cf_bm=qN98uOlLQYGqrsH56qV79uRczys5KCPOC5b7XLEj6Xc-1645511225-0-ARwtpFQIayt35i2C0ypV0N7A6unbPtieM9hNguGC2f5vWXN7dZOOnYRR6i/mLIXj/5+HUOAfaO9B8EnJOg6ymePQ91ijPxbGIpDETdrYBI0SoftYf31qwZu8rN5oBMrR+A==; __utmb=213295240.2.10.1645511223"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "getJson",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "setemailaddress",
+							"value": "{{newMail}}",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_URL}}/mail/change",
+					"host": [
+						"{{base_URL}}"
+					],
+					"path": [
+						"mail",
+						"change"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
